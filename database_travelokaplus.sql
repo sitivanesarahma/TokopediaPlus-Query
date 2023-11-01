@@ -36,7 +36,7 @@ CREATE TABLE Bookings (
     UserID INT,
     TransportationID INT,
     HotelID INT,
-	SpotID INT,
+    SpotID INT,
     TotalPrice DECIMAL(10, 2),
     Status VARCHAR(20) NOT NULL,
     BookingDate DATE,
@@ -194,7 +194,7 @@ VALUES
 
 -- pembayaran
 CREATE TABLE Payment (
-	PaymentID INT PRIMARY KEY,
+    PaymentID INT PRIMARY KEY,
     BookingID INT,
     PaymentMethod VARCHAR(50),
     CONSTRAINT FK_Payment_Booking FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID)
